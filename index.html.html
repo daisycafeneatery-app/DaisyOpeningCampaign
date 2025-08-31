@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daisy Cafe & Eatery | Indian, Chinese & Continental Cuisine in Debra, West Bengal</title>
+	<meta name="description" content="Visit Daisy Cafe in Debra, West Bengal, for a delightful dining experience. We serve a wide variety of authentic Indian, delicious Chinese, and fresh Continental dishes. Perfect for families and friends.">
+	<link rel="icon" type="image/x-icon" href="C:\Users\sandi\OneDrive\Desktop\Dlogo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Daisy Cafe & Eatery",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Debra Bazar",
+    "addressLocality": "Debra",
+    "addressRegion": "West Bengal",
+    "addressCountry": "IN"
+  },
+  "url": "https://daisycafeneatery.com",
+  "servesCuisine": ["Indian", "Chinese", "Continental"],
+  "telephone": "+91-8942940061"
+}
+</script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .coffee-gradient {
+            background: linear-gradient(135deg, #2D1810 0%, #4A2C2A 20%, #5D4037 40%, #3E2723 60%, #1A0E0A 80%, #0D0706 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.9) 0%, rgba(210, 105, 30, 0.8) 50%, rgba(245, 222, 179, 0.7) 100%);
+        }
+        
+        .card-gradient {
+            background: linear-gradient(145deg, #F5DEB3 0%, #DEB887 100%);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-delayed {
+            animation: float 6s ease-in-out infinite 2s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .fade-in-delay {
+            animation: fadeIn 1s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+        
+        .fade-in-delay-2 {
+            animation: fadeIn 1s ease-out 1s forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .steam {
+            animation: steam 3s ease-in-out infinite;
+        }
+        
+        @keyframes steam {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+            50% { transform: translateY(-10px) scale(1.1); opacity: 1; }
+        }
+        
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.2);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        .coffee-bean {
+            width: 20px;
+            height: 30px;
+            background: #8B4513;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+        }
+        
+        .coffee-bean::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 20px;
+            background: #D2691E;
+            border-radius: 1px;
+        }
+        
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .coffee-particle {
+            position: absolute;
+            opacity: 0.1;
+            animation: drift 15s infinite linear;
+        }
+        
+        .coffee-particle:nth-child(odd) {
+            animation-duration: 20s;
+            animation-delay: -5s;
+        }
+        
+        .coffee-particle:nth-child(even) {
+            animation-duration: 25s;
+            animation-delay: -10s;
+        }
+        
+        @keyframes drift {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.1;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .steam-animation {
+            position: absolute;
+            width: 4px;
+            height: 40px;
+            background: linear-gradient(to top, rgba(245, 222, 179, 0.8), transparent);
+            border-radius: 2px;
+            animation: steamRise 4s ease-in-out infinite;
+        }
+        
+        @keyframes steamRise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-20px) scale(1.2);
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-40px) scale(0.8);
+                opacity: 0;
+            }
+        }
+        
+        .bubble {
+            position: absolute;
+            background: rgba(245, 222, 179, 0.3);
+            border-radius: 50%;
+            animation: bubbleFloat 8s infinite ease-in-out;
+        }
+        
+        @keyframes bubbleFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-30px) scale(1.1);
+                opacity: 0.6;
+            }
+        }
+        
+        .coffee-cup-bg {
+            position: absolute;
+            opacity: 0.05;
+            animation: slowRotate 30s infinite linear;
+        }
+        
+        @keyframes slowRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(45deg, rgba(139, 69, 19, 0.1), rgba(245, 222, 179, 0.1));
+            animation: wave 6s ease-in-out infinite;
+        }
+        
+        @keyframes wave {
+            0%, 100% {
+                clip-path: polygon(0 85%, 25% 80%, 50% 85%, 75% 80%, 100% 85%, 100% 100%, 0% 100%);
+            }
+            50% {
+                clip-path: polygon(0 80%, 25% 85%, 50% 80%, 75% 85%, 100% 80%, 100% 100%, 0% 100%);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-stack {
+                flex-direction: column;
+            }
+            
+            .mobile-center {
+                text-align: center;
+            }
+            
+            .mobile-full {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-amber-50 via-orange-50 to-orange-100">
+    <!-- Hero Section -->
+    <section class="min-h-screen relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <!-- Floating Coffee Beans -->
+            <div class="coffee-particle" style="left: 10%; animation-delay: 0s;">
+                <svg width="30" height="40" viewBox="0 0 30 40">
+                    <ellipse cx="15" cy="20" rx="12" ry="18" fill="#8B4513" opacity="0.6"/>
+                    <path d="M15 8 Q15 20 15 32" stroke="#D2691E" stroke-width="2" opacity="0.8"/>
+                </svg>
+            </div>
+            <div class="coffee-particle" style="left: 25%; animation-delay: -3s;">
+                <svg width="25" height="35" viewBox="0 0 25 35">
+                    <ellipse cx="12.5" cy="17.5" rx="10" ry="15" fill="#A0522D" opacity="0.5"/>
+                    <path d="M12.5 7 Q12.5 17.5 12.5 28" stroke="#CD853F" stroke-width="1.5" opacity="0.7"/>
+                </svg>
+            </div>
+            <div class="coffee-particle" style="left: 45%; animation-delay: -7s;">
+                <svg width="35" height="45" viewBox="0 0 35 45">
+                    <ellipse cx="17.5" cy="22.5" rx="14" ry="20" fill="#8B4513" opacity="0.4"/>
+                    <path d="M17.5 8 Q17.5 22.5 17.5 37" stroke="#D2691E" stroke-width="2.5" opacity="0.6"/>
+                </svg>
+            </div>
+            <div class="coffee-particle" style="left: 65%; animation-delay: -12s;">
+                <svg width="28" height="38" viewBox="0 0 28 38">
+                    <ellipse cx="14" cy="19" rx="11" ry="16" fill="#A0522D" opacity="0.5"/>
+                    <path d="M14 7 Q14 19 14 31" stroke="#CD853F" stroke-width="2" opacity="0.7"/>
+                </svg>
+            </div>
+            <div class="coffee-particle" style="left: 80%; animation-delay: -15s;">
+                <svg width="32" height="42" viewBox="0 0 32 42">
+                    <ellipse cx="16" cy="21" rx="13" ry="18" fill="#8B4513" opacity="0.6"/>
+                    <path d="M16 8 Q16 21 16 34" stroke="#D2691E" stroke-width="2.2" opacity="0.8"/>
+                </svg>
+            </div>
+            
+            <!-- Large Coffee Cup Background -->
+            <div class="coffee-cup-bg" style="top: 20%; right: -10%;">
+                <svg width="300" height="300" viewBox="0 0 300 300">
+                    <path d="M50 80 L50 220 Q50 250 80 250 L200 250 Q230 250 230 220 L230 80 Z" fill="#8B4513" opacity="0.3"/>
+                    <path d="M230 120 Q280 120 280 170 Q280 220 230 220" fill="none" stroke="#8B4513" stroke-width="8" opacity="0.3"/>
+                    <ellipse cx="140" cy="85" rx="75" ry="12" fill="#4A2C2A" opacity="0.4"/>
+                </svg>
+            </div>
+            
+            <!-- Steam Effects -->
+            <div class="steam-animation" style="top: 15%; left: 15%; animation-delay: 0s;"></div>
+            <div class="steam-animation" style="top: 25%; left: 25%; animation-delay: 1s;"></div>
+            <div class="steam-animation" style="top: 35%; left: 35%; animation-delay: 2s;"></div>
+            <div class="steam-animation" style="top: 20%; right: 20%; animation-delay: 1.5s;"></div>
+            <div class="steam-animation" style="top: 30%; right: 30%; animation-delay: 2.5s;"></div>
+            
+            <!-- Floating Bubbles -->
+            <div class="bubble" style="width: 20px; height: 20px; top: 60%; left: 20%; animation-delay: 0s;"></div>
+            <div class="bubble" style="width: 15px; height: 15px; top: 70%; left: 40%; animation-delay: 2s;"></div>
+            <div class="bubble" style="width: 25px; height: 25px; top: 50%; right: 25%; animation-delay: 4s;"></div>
+            <div class="bubble" style="width: 18px; height: 18px; top: 80%; right: 40%; animation-delay: 6s;"></div>
+            
+            <!-- Wave Animation -->
+            <div class="wave-animation"></div>
+        </div>
+        
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10 z-2">
+            <div class="absolute top-20 left-10 coffee-bean floating"></div>
+            <div class="absolute top-40 right-20 coffee-bean floating-delayed"></div>
+            <div class="absolute bottom-40 left-20 coffee-bean floating"></div>
+            <div class="absolute bottom-20 right-10 coffee-bean floating-delayed"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="relative z-10 container mx-auto px-6 py-12 min-h-screen flex flex-col justify-center items-center">
+            <!-- Logo -->
+                        <img src="Images\Dlogo.png" alt="HTML Tutorial"
+        width="500px" height="500px">
+            <!-- Brand Name -->
+            <div class="fade-in-delay text-center mb-6">
+                <h1 class="playfair text-5xl md:text-7xl font-bold text-amber-900 mb-2">The New Coffee Experience Brewing Soon</h1>
+                <p class="text-xl md:text-2xl text-amber-800 font-light">in Debra, Paschim Medinipur</p>
+            </div>
+            
+            <!-- Opening Soon Message -->
+            <div class="fade-in-delay-2 text-center max-w-2xl">
+                <div class="relative rounded-2xl p-8 shadow-2xl hover-lift overflow-hidden">
+                    <!-- Blurry Map Background -->
+                    <div class="absolute inset-0 opacity-30">
+                        <svg width="100%" height="100%" viewBox="0 0 400 300" class="w-full h-full object-cover">
+                            <!-- Street Grid Pattern -->
+                            <defs>
+                                <pattern id="streetGrid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <rect width="40" height="40" fill="#F5DEB3"/>
+                                    <path d="M0 20 L40 20 M20 0 L20 40" stroke="#D2B48C" stroke-width="2"/>
+                                </pattern>
+                                <filter id="mapBlur">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                                </filter>
+                            </defs>
+                            
+                            <!-- Base Map -->
+                            <rect width="100%" height="100%" fill="url(#streetGrid)" filter="url(#mapBlur)"/>
+                            
+                            <!-- Buildings -->
+                            <rect x="50" y="80" width="60" height="40" fill="#DEB887" opacity="0.6" filter="url(#mapBlur)"/>
+                            <rect x="150" y="60" width="80" height="60" fill="#D2B48C" opacity="0.6" filter="url(#mapBlur)"/>
+                            <rect x="280" y="90" width="50" height="30" fill="#DEB887" opacity="0.6" filter="url(#mapBlur)"/>
+                            <rect x="120" y="150" width="70" height="50" fill="#D2B48C" opacity="0.6" filter="url(#mapBlur)"/>
+                            <rect x="250" y="180" width="90" height="40" fill="#DEB887" opacity="0.6" filter="url(#mapBlur)"/>
+                            
+                            <!-- Roads -->
+                            <path d="M0 120 L400 120" stroke="#CD853F" stroke-width="8" opacity="0.4" filter="url(#mapBlur)"/>
+                            <path d="M200 0 L200 300" stroke="#CD853F" stroke-width="8" opacity="0.4" filter="url(#mapBlur)"/>
+                            
+                            <!-- Location Pin -->
+                            <circle cx="200" cy="150" r="12" fill="#8B4513" opacity="0.8">
+                                <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="200" cy="150" r="6" fill="#F5DEB3"/>
+                            <path d="M200 140 L200 160 M190 150 L210 150" stroke="#8B4513" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Content Overlay -->
+                    <div class="relative z-10 bg-gradient-to-br from-amber-50 to-orange-100 bg-opacity-95 rounded-xl p-6 backdrop-blur-sm">
+                        <h2 class="playfair text-3xl md:text-4xl font-semibold text-amber-900 mb-4">Opening Soon</h2>
+                        <p class="text-lg text-amber-800 leading-relaxed mb-6">
+                            We're brewing something special for you! Our cozy Cafe & Eatery will soon be serving the finest artisan coffee, 
+                            fresh pastries, and delightful meals in a warm, welcoming atmosphere. Stay tuned for our grand opening!
+                        </p>
+                        <div class="flex justify-center space-x-2">
+                            <div class="w-3 h-3 bg-amber-600 rounded-full animate-pulse"></div>
+                            <div class="w-3 h-3 bg-amber-600 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                            <div class="w-3 h-3 bg-amber-600 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gradient Transition -->
+    <div class="h-16 bg-gradient-to-b from-orange-100 via-amber-50 to-amber-100"></div>
+    
+    <!-- Join Our Team Section -->
+    <section class="py-20 bg-gradient-to-b from-orange-100 via-amber-100 to-amber-200 relative overflow-hidden">
+        <!-- Background Animation -->
+        <div class="absolute inset-0 opacity-5">
+            <!-- Coffee Shop Elements -->
+            <div class="absolute top-10 left-5 coffee-cup-bg" style="animation-duration: 40s;">
+                <svg width="150" height="150" viewBox="0 0 150 150">
+                    <rect x="30" y="40" width="90" height="80" rx="10" fill="#8B4513"/>
+                    <circle cx="75" cy="45" r="35" fill="#4A2C2A"/>
+                    <path d="M120 60 Q140 60 140 80 Q140 100 120 100" stroke="#8B4513" stroke-width="4" fill="none"/>
+                </svg>
+            </div>
+            <div class="absolute bottom-10 right-5 coffee-cup-bg" style="animation-duration: 35s; animation-direction: reverse;">
+                <svg width="120" height="120" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="45" fill="#D2691E" opacity="0.6"/>
+                    <circle cx="60" cy="55" r="30" fill="#8B4513" opacity="0.8"/>
+                    <rect x="45" y="45" width="30" height="20" fill="#F5DEB3" opacity="0.7"/>
+                </svg>
+            </div>
+            
+            <!-- Floating Coffee Beans -->
+            <div class="coffee-particle" style="left: 20%; animation-delay: -2s; animation-duration: 18s;">
+                <div class="coffee-bean"></div>
+            </div>
+            <div class="coffee-particle" style="left: 70%; animation-delay: -8s; animation-duration: 22s;">
+                <div class="coffee-bean"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-4xl md:text-5xl font-bold text-amber-900 mb-4">Join Our Team</h2>
+                <p class="text-xl text-amber-800 max-w-2xl mx-auto">
+                    Be part of something special. We're looking for passionate individuals to help create memorable experiences.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Barista Position -->
+                <div class="card-gradient rounded-2xl p-8 shadow-xl hover-lift text-center">
+                    <div class="mb-6">
+                        <svg width="60" height="60" viewBox="0 0 60 60" class="mx-auto">
+                            <circle cx="30" cy="30" r="25" fill="#8B4513" opacity="0.2"/>
+                            <path d="M20 25 L20 40 Q20 45 25 45 L35 45 Q40 45 40 40 L40 25 Z" fill="#D2691E"/>
+                            <ellipse cx="30" cy="26" rx="9" ry="2" fill="#4A2C2A"/>
+                            <path d="M40 30 Q50 30 50 37 Q50 44 40 44" fill="none" stroke="#8B4513" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="playfair text-2xl font-semibold text-amber-900 mb-3">Barista</h3>
+                    <p class="text-amber-800 mb-6">Craft perfect coffee experiences and connect with our community.</p>
+                    <a href="https://forms.gle/PrVjBrK9vjBbjrQHA">
+						<button class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+							Apply Now
+						</button>
+					</a>
+                </div>
+                
+                <!-- Chef Position -->
+                <div class="card-gradient rounded-2xl p-8 shadow-xl hover-lift text-center">
+                    <div class="mb-6">
+                        <svg width="60" height="60" viewBox="0 0 60 60" class="mx-auto">
+                            <circle cx="30" cy="30" r="25" fill="#8B4513" opacity="0.2"/>
+                            <rect x="25" y="20" width="10" height="20" fill="#D2691E" rx="2"/>
+                            <circle cx="30" cy="18" r="8" fill="#F5DEB3"/>
+                            <rect x="28" y="10" width="4" height="8" fill="#8B4513"/>
+                        </svg>
+                    </div>
+                    <h3 class="playfair text-2xl font-semibold text-amber-900 mb-3">Chef</h3>
+                    <p class="text-amber-800 mb-6">Create delicious meals that complement our coffee culture.</p>
+                    <a href="https://forms.gle/PrVjBrK9vjBbjrQHA">
+						<button class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+							Apply Now
+						</button>
+					</a>
+                </div>
+                
+                <!-- Server Position -->
+                <div class="card-gradient rounded-2xl p-8 shadow-xl hover-lift text-center">
+                    <div class="mb-6">
+                        <svg width="60" height="60" viewBox="0 0 60 60" class="mx-auto">
+                            <circle cx="30" cy="30" r="25" fill="#8B4513" opacity="0.2"/>
+                            <circle cx="30" cy="25" r="8" fill="#F5DEB3"/>
+                            <rect x="25" y="33" width="10" height="15" fill="#D2691E" rx="2"/>
+                            <circle cx="27" cy="23" r="1" fill="#8B4513"/>
+                            <circle cx="33" cy="23" r="1" fill="#8B4513"/>
+                            <path d="M27 27 Q30 30 33 27" stroke="#8B4513" stroke-width="1" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="playfair text-2xl font-semibold text-amber-900 mb-3">Server</h3>
+                    <p class="text-amber-800 mb-6">Provide exceptional service and create welcoming experiences.</p>
+                    <a href="https://forms.gle/PrVjBrK9vjBbjrQHA">
+						<button class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+							Apply Now
+						</button>
+					</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gradient Transition -->
+    <div class="h-20 bg-gradient-to-b from-amber-200 via-amber-300 to-amber-900"></div>
+    
+    <!-- Contact & Social Media Section -->
+    <section class="py-20 coffee-gradient relative overflow-hidden">
+        <!-- Rich Coffee Texture Overlay -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(74, 44, 42, 0.4) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(93, 64, 55, 0.2) 0%, transparent 70%);"></div>
+        </div>
+        
+        <!-- Background Animation -->
+        <div class="absolute inset-0 opacity-15">
+            <!-- Coffee Shop Atmosphere -->
+            <div class="absolute top-0 left-0 w-full h-full">
+                <!-- Enhanced Espresso Machine Steam -->
+                <div class="steam-animation" style="top: 10%; left: 10%; animation-delay: 0s; height: 80px; background: linear-gradient(to top, rgba(245, 222, 179, 0.9), rgba(255, 255, 255, 0.3));"></div>
+                <div class="steam-animation" style="top: 15%; left: 12%; animation-delay: 0.5s; height: 70px; background: linear-gradient(to top, rgba(245, 222, 179, 0.8), rgba(255, 255, 255, 0.2));"></div>
+                <div class="steam-animation" style="top: 20%; left: 14%; animation-delay: 1s; height: 60px; background: linear-gradient(to top, rgba(245, 222, 179, 0.7), rgba(255, 255, 255, 0.1));"></div>
+                
+                <div class="steam-animation" style="top: 10%; right: 15%; animation-delay: 2s; height: 75px; background: linear-gradient(to top, rgba(245, 222, 179, 0.9), rgba(255, 255, 255, 0.3));"></div>
+                <div class="steam-animation" style="top: 18%; right: 17%; animation-delay: 2.5s; height: 65px; background: linear-gradient(to top, rgba(245, 222, 179, 0.8), rgba(255, 255, 255, 0.2));"></div>
+                
+                <!-- Additional atmospheric steam -->
+                <div class="steam-animation" style="top: 30%; left: 30%; animation-delay: 3s; height: 50px; background: linear-gradient(to top, rgba(245, 222, 179, 0.6), transparent);"></div>
+                <div class="steam-animation" style="top: 25%; right: 35%; animation-delay: 4s; height: 55px; background: linear-gradient(to top, rgba(245, 222, 179, 0.7), transparent);"></div>
+                
+                <!-- Coffee Drip Animation -->
+                <div class="absolute top-20 left-1/4">
+                    <svg width="100" height="200" viewBox="0 0 100 200">
+                        <defs>
+                            <linearGradient id="dripGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1"/>
+                                <stop offset="50%" style="stop-color:#8B4513;stop-opacity:0.8"/>
+                                <stop offset="100%" style="stop-color:#2D1810;stop-opacity:0.4"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="20" r="8" fill="url(#dripGradient)">
+                            <animate attributeName="cy" values="20;180;20" dur="4s" repeatCount="indefinite"/>
+                            <animate attributeName="r" values="8;3;8" dur="4s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="30" cy="40" r="6" fill="url(#dripGradient)">
+                            <animate attributeName="cy" values="40;200;40" dur="5s" repeatCount="indefinite"/>
+                            <animate attributeName="r" values="6;2;6" dur="5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="70" cy="60" r="7" fill="url(#dripGradient)">
+                            <animate attributeName="cy" values="60;220;60" dur="4.5s" repeatCount="indefinite"/>
+                            <animate attributeName="r" values="7;2.5;7" dur="4.5s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+                
+                <!-- Enhanced Coffee Bean Pattern -->
+                <div class="absolute bottom-10 right-10 coffee-cup-bg" style="animation-duration: 50s;">
+                    <svg width="200" height="200" viewBox="0 0 200 200">
+                        <ellipse cx="100" cy="100" rx="60" ry="80" fill="#D2691E" opacity="0.4"/>
+                        <ellipse cx="100" cy="100" rx="45" ry="65" fill="#8B4513" opacity="0.5"/>
+                        <path d="M100 40 Q100 100 100 160" stroke="#F5DEB3" stroke-width="4" opacity="0.6"/>
+                        <ellipse cx="100" cy="100" rx="30" ry="50" fill="none" stroke="#DEB887" stroke-width="2" opacity="0.5"/>
+                        <ellipse cx="100" cy="100" rx="15" ry="25" fill="#4A2C2A" opacity="0.3"/>
+                    </svg>
+                </div>
+                
+                <!-- Additional coffee atmosphere elements -->
+                <div class="absolute top-20 right-20 coffee-cup-bg" style="animation-duration: 45s; animation-direction: reverse;">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="40" fill="#4A2C2A" opacity="0.3"/>
+                        <circle cx="60" cy="60" r="25" fill="#8B4513" opacity="0.4"/>
+                        <circle cx="60" cy="60" r="15" fill="#D2691E" opacity="0.3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="playfair text-4xl md:text-5xl font-bold text-white mb-4">Stay Connected</h2>
+                    <p class="text-xl text-amber-100 max-w-2xl mx-auto">
+                        Follow our journey and be the first to know about our grand opening!
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Contact Info -->
+                    <div class="text-white">
+                        <h3 class="playfair text-3xl font-semibold mb-8">Contact Us</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Address</p>
+                                    <p class="text-amber-100">Debra Bazar, Paschim Medinipur, West Benagl 721126</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Phone</p>
+                                    <p class="text-amber-100">(+91) 8942940061 </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-amber-100">hello@daisycafeneatery.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="text-white text-center md:text-left">
+                        <h3 class="playfair text-3xl font-semibold mb-8">Follow Us</h3>
+                        <div class="flex justify-center md:justify-start space-x-6 mb-8">
+							<a href="#" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30">
+                                <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M20 12.05C19.9813 10.5255 19.5273 9.03809 18.6915 7.76295C17.8557 6.48781 16.673 5.47804 15.2826 4.85257C13.8921 4.2271 12.3519 4.01198 10.8433 4.23253C9.33473 4.45309 7.92057 5.10013 6.7674 6.09748C5.61422 7.09482 4.77005 8.40092 4.3343 9.86195C3.89856 11.323 3.88938 12.8781 4.30786 14.3442C4.72634 15.8103 5.55504 17.1262 6.69637 18.1371C7.83769 19.148 9.24412 19.8117 10.75 20.05V14.38H8.75001V12.05H10.75V10.28C10.7037 9.86846 10.7483 9.45175 10.8807 9.05931C11.0131 8.66687 11.23 8.30827 11.5161 8.00882C11.8022 7.70936 12.1505 7.47635 12.5365 7.32624C12.9225 7.17612 13.3368 7.11255 13.75 7.14003C14.3498 7.14824 14.9482 7.20173 15.54 7.30003V9.30003H14.54C14.3676 9.27828 14.1924 9.29556 14.0276 9.35059C13.8627 9.40562 13.7123 9.49699 13.5875 9.61795C13.4627 9.73891 13.3667 9.88637 13.3066 10.0494C13.2464 10.2125 13.2237 10.387 13.24 10.56V12.07H15.46L15.1 14.4H13.25V20C15.1399 19.7011 16.8601 18.7347 18.0985 17.2761C19.3369 15.8175 20.0115 13.9634 20 12.05Z" fill="#ffffff"></path>
+                            </a>
+                            <a href="#" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30">
+                                <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30">
+                                <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30">
+                                <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="text-amber-100 text-lg">
+                            Join our community and get updates on our opening, special events, and exclusive offers!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gradient Transition -->
+    <div class="h-8 bg-gradient-to-b from-amber-900 to-amber-950"></div>
+    
+    <!-- Footer -->
+    <footer class="bg-amber-950 text-white py-3">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-amber-200 text-sm">&copy; 2025 Daisy Cafe & Eatery. All rights reserved. | Crafted with ❤️ and ☕</p>
+        </div>
+    </footer>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'977614c82008c795',t:'MTc1NjU3NTcwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
