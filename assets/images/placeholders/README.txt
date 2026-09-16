@@ -1,0 +1,1 @@
+Place production photography here using the filenames documented in README.md. Current gallery assets are supplied Daisy Cafe & Eatery photographs. Replace them when higher-resolution originals are available.

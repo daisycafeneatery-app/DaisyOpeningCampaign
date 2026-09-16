@@ -1,0 +1,46 @@
+# Daisy Cafe & Eatery
+
+> Daisy Cafe & Eatery is a cafe and eatery in Debra bazar, Paschim Medinipur, West Bengal, India 721149.
+
+## Entity
+- Name: Daisy Cafe & Eatery
+- Type: Cafe / Coffee Shop
+- Address: Debra bazar, Paschim Medinipur, West Bengal, India 721149
+- Phone: +91 92422 62036
+- Website: https://www.daisycafeneatery.com/
+- Google Maps: https://maps.app.goo.gl/wAxp3KUZfrJD55Ya6
+- Instagram: https://www.instagram.com/daisycafeneatery?stkn=dWhiYnJma3c3cW1v
+- Facebook: https://www.facebook.com/share/1R6puHFPuz/
+- Coordinates: 22.393884579619385, 87.56485627520422
+
+## Food and drink
+- Coffee & drinks
+- Indian cuisine
+- Chinese cuisine
+- Continental cuisine
+- Tandoor
+- Desserts
+- Custom cakes
+
+## Services
+- Dine-in
+- Food delivery within the stated 8 km delivery radius
+- Celebration and custom cake planning
+- Cafe facilities and loyalty benefits
+
+## Local context
+- Debra, Paschim Medinipur
+- NH16 / Kolkata–Kharagpur route context
+- Approximate route references on the contact page are informational and can vary with traffic and route.
+
+## Important URLs
+- Home: https://www.daisycafeneatery.com/
+- Menu: https://www.daisycafeneatery.com/menu/
+- Food: https://www.daisycafeneatery.com/menu/food.html
+- Coffee & drinks: https://www.daisycafeneatery.com/Coffee/daisy-coffee.html
+- Desserts & cakes: https://www.daisycafeneatery.com/menu/desserts-cakes.html
+- Order: https://www.daisycafeneatery.com/menu/order.html
+- Services: https://www.daisycafeneatery.com/services/
+- Celebrations: https://www.daisycafeneatery.com/services/celebration-and-custom-cake.html
+- Contact: https://www.daisycafeneatery.com/contact.html
+- FAQ: https://www.daisycafeneatery.com/faq.html

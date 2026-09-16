@@ -1,0 +1,10 @@
+{
+  "name": "Daisy Cafe & Eatery",
+  "short_name": "Daisy Cafe",
+  "description": "Premium cafe and eatery in Debra, Paschim Medinipur, serving coffee, drinks, Indian, Chinese, Continental and Tandoor cuisine, desserts and custom cakes.",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [{"src":"favicon.svg","sizes":"any","type":"image/svg+xml"}],
+  "theme_color": "#17090b",
+  "background_color": "#fffdf9"
+}
